@@ -1,5 +1,7 @@
 # Shan Hai Gen
 
+Tracery script inspired by Shan Hai Jing
+
 Shan Hai Jing, or The Classic of Mountains and Seas, is a very strange ancient
 Chinese book, a sort of geography textbook with a scattering of mythological
 creatures and folk-tales. It includes some beautiful passages, ranging from
