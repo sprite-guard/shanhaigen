@@ -1,7 +1,18 @@
-# shanhaigen
-Tracery script inspired by Shan Hai Jing.
+# Shan Hai Gen
 
-Sample output:
+Shan Hai Jing, or The Classic of Mountains and Seas, is a very strange ancient
+Chinese book, a sort of geography textbook with a scattering of mythological
+creatures and folk-tales. It includes some beautiful passages, ranging from
+short and simple descriptions of chimeric beasts to whole stories. I've had a
+fascination with the book for many years, and my name "Sprite Guard" is taken
+from one of its stories.
+
+This year's NaPoGenMo seemed like a great opportunity to combine my love of the
+book with my interest in generative text. The book's writing style is so simple
+and formulaic that it seemed like a great model for my first non-trivial Tracery
+project.
+
+# Sample output
 
 >90 miles southwest is a mountain called Mount Fly-Sleeping. Near the base can be found Scour-Dull dogs. On this mountain can be found Shyopen blossoms, which look like a fir but with flowers like a pea flower and broad leaves. The roots can be eaten to cure stomach pains. The mountain is presided over by the deity Fly-Stone. The river Hidden rises here and flows southeast.
 
