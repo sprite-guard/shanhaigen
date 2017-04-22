@@ -10,9 +10,9 @@ var grammar = tracery.createGrammar({
     ],
     
     "origin": [
-        "<p>#[mountain:Mount #name#][river:#name#]mtndesc#</p>#origin##origin#",
-        "<p>#[mountain:Mount #name#][river:#name#]mtndesc#</p>#origin#",
-        "<p>#[mountain:Mount #name#][river:#name#]mtndesc#</p>"
+        "<p>#[mountain:Mount #name#][river:#name#][deityname:#name#]mtndesc#</p>#origin##origin#",
+        "<p>#[mountain:Mount #name#][river:#name#][deityname:#name#]mtndesc#</p>#origin#",
+        "<p>#[mountain:Mount #name#][river:#name#][deityname:#name#]mtndesc#</p>"
     ],
     
     "name": [
@@ -325,28 +325,49 @@ var grammar = tracery.createGrammar({
     ],
     
     "floralong": [
-        "#many# #name# #plants#, which look like a #plant# but with flowers like #flower.a# and #leaf# leaves",
-        "#name# #plants#, which look like a #plant# but with flowers like #flower.a# and #leaf# leaves",
-        "#many# #name# #plants#, which look like a #plant# but with flowers like #flower.a#",
-        "#many# #name# #plants#, which look like a #plant# with #leaf# leaves",
-        "#many# #name# #plants#, which look like a #modifier# #plant# but with flowers like #flower.a# and #leaf# leaves",
-        "#name# #plants#, which look like a #modifier# #plant# but with flowers like #flower.a# and #leaf# leaves",
-        "#many# #name# #plants#, which look like a #modifier# #plant# but with flowers like a #flower#",
-        "#many# #name# #plants#, which look like a #modifier# #plant# with #leaf# leaves",
+        "#many# #name# trees, which look like a #tree# with #leaf# leaves",
+        "#many# trees that look like #tree.s# with #leaf# leaves",
+        "#many# #name# trees, which look like a #tree# but with flowers like #flower.a#",
+        
+        "#many# #name# vines, which look like a #vine# with flowers like #flower.a#",
+        "#many# #name# vines. These look like #vine.s#, but have flowers like #flower.a# and #leaf# leaves",
+        
+        "#many# #name# shrubs, which look much like a #shrub# but have #leaf# leaves",
+        
+        "fields of #name#, a kind of #grass#"
     ],
     
-    "plant": [
-        "pine",
+    "tree": [
         "fir",
-        "oak",
+        "pine",
         "yew",
+        "elm",
         "birch",
-        "cedar",
-        "juniper",
-        "rhododendron",
-        "strawberry",
-        "blackberry",
         "hemlock"
+    ],
+    
+    "vine": [
+        "creeper",
+        "beanstalk",
+        "blackberry",
+        "grape",
+        "squash",
+        "ivy",
+        "honeysuckle"
+    ],
+    
+    "shrub": [
+        "rhododendron",
+        "thuja",
+        "broom",
+        "wild rose"
+    ],
+    
+    "grass": [
+        "grass",
+        "cane",
+        "reed",
+        "cattail"
     ],
     
     "leaf": [
@@ -486,7 +507,107 @@ var grammar = tracery.createGrammar({
     ],
     
     "deity": [
-        "The mountain is presided over by the deity #name#"
+        "The mountain is presided over by the deity #deityname#",
+        "The deity of this mountain is #deityname#. To sacrifice to this deity, #sacrifice#",
+        "The mountain is presided over by the deity #deityname#, who accepts sacrifices of #sacraficial#",
+    ],
+    
+    "sacraficial": [
+        "butter",
+        "ox fat",
+        "lambs",
+        "sage",
+        "incense",
+        "purified oil",
+        "olive oil",
+        "herbs"
+    ],
+    
+    "sacrifice": [
+        "#offering# #sacraficial#. #shrinedesc#",
+        "#offering# #sacraficial# and #secondary#. #shrinedesc#",
+        "#offering# #sacraficial# or #secondary#. #shrinedesc#",
+    ],
+    
+    "secondary": [
+        "sugar",
+        "lamp oil",
+        "fruit",
+        "fresh flowers",
+        "flowers of the #plant#",
+        "a branch of #name# tree",
+        "leaves of the #plant#"
+    ],
+    
+    "plant": [
+        "#name# tree",
+        "#name# plant",
+        "#name# bush"
+    ],
+    
+    "offering": [
+        "make an offering of",
+        "make a burnt offering of",
+        "place on an altar an offering of",
+        "bring to its shrine some"
+    ],
+    
+    "shrinedesc": [
+        "You can recognize the shrine of #deityname# by its #distinctive# #feature#",
+        "#deityname#'s shrine is #distinctive#, and always #located#",
+        "Their shrine has #distinctive.a# #feature# and is usually #located#",
+        "The distinctive #distinctive# #feature# makes #deityname#'s shrine easy to spot, always #located#"
+    ],
+    
+    "distinctive": [
+        "bright red",
+        "brick",
+        "flat",
+        "gilded",
+        "rakishly chamfered",
+        "sloping",
+        "steeply slanted",
+        "asymmetrical",
+        "black",
+        "tall",
+        "short",
+        "large",
+        "small",
+        "multi-hued",
+        "stone",
+        "wood"
+    ],
+    
+    "feature": [
+        "roof",
+        "base",
+        "altar",
+        "door",
+        "wall",
+        "statue",
+        "reredos",
+        "cairn",
+        "shelter"
+    ],
+    
+    "located": [
+        "#placed# between two #thing.s#",
+        "#placed# beside #thing.a#",
+        "near water",
+        "near #thing.a#"
+    ],
+    
+    "placed": [
+        "placed",
+        "nestled",
+        "tucked"
+    ],
+    
+    "thing": [
+        "rock",
+        "tree",
+        "bush",
+        "cairn"
     ]
 });
 
